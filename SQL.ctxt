@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=file
+comment0.target=SQL(java.lang.String)
+comment1.params=query
+comment1.target=java.sql.ResultSet\ query(java.lang.String)
+comment2.params=
+comment2.target=void\ close()
+numComments=3

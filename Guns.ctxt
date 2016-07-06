@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Guns()
+comment1.params=rs
+comment1.target=void\ manufacturersRS(java.sql.ResultSet)
+comment2.params=rs
+comment2.target=void\ modelsRS(java.sql.ResultSet)
+comment3.params=rs
+comment3.target=void\ variantsRS(java.sql.ResultSet)
+comment4.params=
+comment4.target=void\ printAll()
+numComments=5

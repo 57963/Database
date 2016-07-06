@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=stage\ type
+comment0.target=void\ prepareStageEvents(javafx.stage.Stage,\ ItemType)
+comment1.params=we
+comment1.target=void\ handle(javafx.stage.WindowEvent)
+numComments=2
