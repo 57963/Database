@@ -5,6 +5,7 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.control.Label;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
 import javafx.fxml.FXML;
 import javafx.event.EventHandler;
 import javafx.stage.WindowEvent;
@@ -55,7 +56,7 @@ public class MainSceneController{
         if(tree.getSelectionModel().getSelectedItem() != null){
             DBItem selected = tree.getSelectionModel().getSelectedItem().getValue();
             name.setText(selected.name);
-            if(selected.getClass().getCanonicalName() == "Variant"){
+            if(selected.type == ItemType.VARIANT){
                 description.setText(((Variant)selected).description);
             }
         }
@@ -69,13 +70,16 @@ public class MainSceneController{
             case "Variant":type=ItemType.VARIANT;
         }
         try{
-            Stage add = new Stage();
             FXMLLoader loader = new FXMLLoader(Application.class.getResource("newItem.fxml"));
+            Stage add = new Stage();
+            add.initModality(Modality.WINDOW_MODAL);
+            add.initOwner(stage.getScene().getWindow());
             add.setTitle("New " + newChoice.getSelectionModel().getSelectedItem());
             add.setScene(new Scene(loader.load()));
+            add.setResizable(false);
             add.show();
             AddSceneController controller = loader.getController();
-            controller.prepareStageEvents(stage,type);
+            controller.prepareStageEvents(add,type);
         } catch(Exception e){
             e.printStackTrace();
         }

@@ -5,5 +5,6 @@ public class Variant extends DBItem{
         this.ID = ID;
         this.name = name;
         this.description = description;
+        type = ItemType.VARIANT;
     }
 }

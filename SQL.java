@@ -20,6 +20,14 @@ public class SQL{
         return null;
     }
     
+    public void update(String update){
+        try{
+            connection.createStatement().executeUpdate(update);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    
     public void close(){
         try{
             connection.close();

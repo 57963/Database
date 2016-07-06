@@ -7,5 +7,6 @@ public class Model extends DBItem{
         this.ID = ID;
         this.name = name;
         variants = new ArrayList<>();
+        type = ItemType.MODEL;
     }
 }

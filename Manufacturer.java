@@ -7,5 +7,6 @@ public class Manufacturer extends DBItem{
         this.ID = ID;
         this.name = name;
         models = new ArrayList<>();
+        type = ItemType.MANUFACTURER;
     }
 }
